@@ -1,0 +1,90 @@
+body{
+    margin: 10px;
+    padding: 10px;
+}
+
+.contenedor{
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.card{
+    background: rgb(250, 242, 242);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.card__thumbnail{
+    width: 650px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.card__img{
+    width: 100%;
+}
+
+.card__titulo{
+    font-family: 'Relaway', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.card__enlace_titulo{
+    color: black;
+}
+
+.card__parrafo{
+    line-height: 28px;
+    color: #66dd66;
+    margin-bottom: 20px;
+}
+
+.boton{
+    border: none;
+    min-width: 120px;
+    height: 50px;
+    padding: 0 30px;
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    border-radius: 100px;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #403cc2;
+    transition: .3s ease all;
+}
+
+/*Modificadores*/
+.boton--absolute{
+    position: absolute;
+    right: 20px;
+    bottom: -25px;
+}
+
+.boton--green{
+    background: #7ba771;
+}
+
+.frase{
+    text-align: center;
+    font-family: Visby Round CF;
+}
+
+.item-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
