@@ -29,10 +29,29 @@ $(document).ready(function(){
       'last_name': $('input[name="lats_name"]').val()
     }
   
-    $.post($(this).attr("action"), usuarios, function(res){
-      console.log(res);
-    }).done(function(){
-      alert("usuario creado");
+    // $.post($(this).attr("action"), usuarios, function(res){
+    //   console.log(res);
+    // }).done(function(){
+    //   alert("usuario creado");
+    // })
+
+    /* otra forma de manejar las peticiones con ajax */
+    $.ajax({
+      type: 'POST',
+      /* dataType: 'json',
+      contentType: 'application/json',  *//* especifica el formato en el que viajaran los datos */
+      url: $(this).attr("action"),
+      data: usuarios,
+      beforeSend: function(){ /* esto se ejecuta mientras se esta haciendo la peticion */
+        console.log("Enviando usuarios");
+      },
+      success: function(response){
+        console.log(response);
+      },
+      error: function(){
+        console.log("ocurrio un error");
+      },
+      timeout: 2000
     })
 
     return false
